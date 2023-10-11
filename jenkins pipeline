@@ -35,7 +35,9 @@ stages {
             steps {
                 echo "The build number is ${BUILD_NUMBER}"
                 echo "You can also see jenkins url-> ${JENKINS_URL}"
-                sh 'echo "I can access $BUILD_NUMBER in shell command as well."'
+               echo "You can also see JON NAME -> ${JOB_NAME}"
+
+                
             }
         }
     
