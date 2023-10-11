@@ -36,8 +36,8 @@ stages {
                 echo "The build number is ${BUILD_NUMBER}"
                 echo "You can also see jenkins url-> ${JENKINS_URL}"
                echo "You can also see JON NAME -> ${JOB_NAME}"
-
-                
+              echo "You can also see EXECUTOR NUMBER-> ${EXECUTOR_NUMBER}"
+               echo "You can also see node name-> ${NODE_NAME}" 
             }
         }
     
