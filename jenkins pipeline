@@ -20,7 +20,7 @@ stages {
         stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
-
+ 
                 echo "Biography: ${params.BIOGRAPHY}"
 
                 echo "Toggle: ${params.TOGGLE}"
@@ -35,12 +35,17 @@ stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
+
             }
         }
   stage('welcome') {
 
        steps {
          echo 'welcome'
+sh '''
+touch 11.txt
+pwd
+'''
 
              }
 
