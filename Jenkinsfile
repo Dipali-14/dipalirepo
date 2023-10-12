@@ -1,5 +1,5 @@
 pipeline{
-agent {node {lable 'build-in'  }  }      
+agent any
 stages{
   stage ('SCM Checkout') {
     steps {
