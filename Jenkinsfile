@@ -19,7 +19,7 @@ sh '''
   stage ('build check'){
     steps {
     sh '''
-    cd/home/ec2-user/game-of-life
+    cd /home/ec2-user/game-of-life
       mvn install
       ''' 
       echo 'build done'
