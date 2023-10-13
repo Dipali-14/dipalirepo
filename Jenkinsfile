@@ -1,27 +1,36 @@
 pipeline{
-agent any
-stages{
+agent {
+  node 
+       { 
+  label 'build-in'
+   customeWorkspace '/home/ec2-user'    
+       } }
+stages {
   stage ('SCM Checkout') {
     steps {
-
-      echo 'scm checkout success'
+sh '''
+      git clone https://github.com/wakaleo/game-of-life.git '
+      echo 'scm checkout success
+      '''
     }
   }
   
   stage ('build check'){
     steps {
-    sh 'mvn install'
-   
+    sh '''
+    cd/home/ec2-user/game-of-life
+      mvn install
+      ''' 
       echo 'build done'
     }
   }
 
-  stage (test){
-    steps {
-       sh 'mvn -version'
-      
-    }
-  }
+   stage('Deploy') {
+            steps {
+            sh ' cp game-of-life/gameoflife-web/target/gameoflife.war  /mnt/apache-tomcat-9.0.80/webapps ' 
+			
+            }
+        }		
 }
 }
     
