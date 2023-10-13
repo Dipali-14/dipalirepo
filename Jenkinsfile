@@ -2,9 +2,10 @@ pipeline{
 agent {
   node 
        { 
-  label 'build-in'
+  label 'built-in'
        customWorkspace '/home/ec2-user'
-       } }
+       }
+}
 stages {
   stage ('SCM Checkout') {
     steps {
