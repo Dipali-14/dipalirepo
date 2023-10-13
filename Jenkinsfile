@@ -3,7 +3,7 @@ agent {
   node 
        { 
   label 'build-in'
-   customeWorkspace '/home/ec2-user'    
+       customWorkspace '/home/ec2-user'
        } }
 stages {
   stage ('SCM Checkout') {
