@@ -10,8 +10,8 @@ stages {
   stage ('SCM Checkout') {
     steps {
 sh '''
-      git 'clone https://github.com/wakaleo/game-of-life.git '
-      echo 'scm checkout success'
+      git clone https://github.com/wakaleo/game-of-life.git 
+      echo scm checkout success
       '''
     }
   }
